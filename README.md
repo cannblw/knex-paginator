@@ -4,10 +4,17 @@ Simple paginator for Knex. It adds the .paginate() function to knex's query buil
 
 ## How to set up
 
-To use this paginator, simply add the following lines to your Knex set up:
+To use this paginator, first you will have to install it:
+
+```
+npm i knex-paginator --save
+```
+
+Then, simply add the following lines to your Knex set up:
 
 ```javascript
 const knex = require('knex')(config);
+
 const setupPaginator = require('knex-paginator');
 setupPaginator(knex);
 ```
@@ -57,8 +64,8 @@ The function returns an object that contains the following data:
 
 | Key | Value |
 | --- | --- |
-| per_page  | Items per page  |
-| current_page | Current page |
+| per_page  | Items per page. |
+| current_page | Current page number. |
 | from | ID of the first item of the current page. |
 | to | ID of the last item of the current page. |
 | data | The actual data of the current page. |
@@ -67,5 +74,5 @@ The function returns an object that contains the following data:
 
 | Key | Value |
 | --- | --- |
-| total | Total items that the full query contains |
-| last_page | Number of pages |
+| total | Total items that the full query contains. |
+| last_page | Last page number. |
