@@ -1,0 +1,27 @@
+{
+  "name": "knex-paginator",
+  "version": "1.0.0",
+  "description": "Simple paginator for Knex. It adds the .paginate() function to knex's query builder.",
+  "main": "lib/knex-paginator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cannblw/knex-paginator.git"
+  },
+  "keywords": [
+    "knex",
+    "pagination",
+    "paginator"
+  ],
+  "author": "Edgar Chirivella <edgar9512@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cannblw/knex-paginator/issues"
+  },
+  "homepage": "https://github.com/cannblw/knex-paginator#readme",
+  "dependencies": {
+    "knex": ""
+  }
+}
