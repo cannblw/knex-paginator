@@ -22,14 +22,14 @@ setupPaginator(knex);
 ## Function definition
 
 ```javascript
-paginate(perPage = 10, page = 1, isLengthAware = true)
+paginate(perPage = 10, page = 1, isLengthAware = false)
 ```
 
 | Argument | Description |
 | --- | --- |
 | perPage (`integer`, defaults to `10`) | Items to show per page. |
 | page (`integer`, defaults to `1`) | Current page. |
-| isLengthAware (`boolean`. Defaults to `true`) | Whether the paginator is aware of its length or not. |
+| isLengthAware (`boolean`. Defaults to `false`) | Whether the paginator is aware of its length or not. |
 
 **Note**: If `isLengthAware` is set to true, the performance will be worst, as it will have to perform an extra query to get the length.
 
@@ -39,7 +39,7 @@ paginate(perPage = 10, page = 1, isLengthAware = true)
 ```javascript
 knex('products')
     .where('price', '<', 20)
-    .paginate(15, 1, false)
+    .paginate(15, 1, true)
     .then(paginator => {
         console.log(paginator.current_page);
         console.log(paginator.data);
@@ -50,7 +50,7 @@ knex('products')
 ```javascript
 const paginator = await knex('products')
     .where('price', '<', 20)
-    .paginate(15, 1, false);
+    .paginate(15, 1, true);
 
 console.log(paginator.current_page);
 console.log(paginator.data);
@@ -70,7 +70,7 @@ The function returns an object that contains the following data:
 | to | ID of the last item of the current page. |
 | data | The actual data of the current page. |
 
-**Returned if `isLengthAware==true`:**
+**Returned if `isLengthAware == true`:**
 
 | Key | Value |
 | --- | --- |
