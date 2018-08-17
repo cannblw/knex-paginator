@@ -1,6 +1,6 @@
 {
   "name": "knex-paginator",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simple paginator for Knex. It adds the .paginate() function to knex's query builder.",
   "main": "lib/knex-paginator.js",
   "scripts": {
