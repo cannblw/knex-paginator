@@ -1,5 +1,7 @@
 # Knex-Paginator
 
+**Warning: do not use in production. This is not being actively maintained.**
+
 Simple paginator for Knex. It adds the .paginate() function to knex's query builder.
 
 ## How to set up
