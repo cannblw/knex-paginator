@@ -20,8 +20,5 @@
   "bugs": {
     "url": "https://github.com/cannblw/knex-paginator/issues"
   },
-  "homepage": "https://github.com/cannblw/knex-paginator#readme",
-  "dependencies": {
-    "knex": ""
-  }
+  "homepage": "https://github.com/cannblw/knex-paginator#readme"
 }
